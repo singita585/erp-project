@@ -1,0 +1,7 @@
+#In this section we need to create the upload button in order for us to upload the csv file
+# inside the form method we need to include the 'multipart/form-data, if we don't include it the program will not upload the file
+
+    <form method="POST" enctype="multipart/form-data" action="/">
+        <input type="file" id="myFile" name="uploaded-file" accept=".csv">
+        <input type="submit" value="Upload file">
+    </form>
