@@ -1,0 +1,34 @@
+APP.PY Requirements
+The imports that we need to install in the app.py are as follows:
+#from flask import Flask, render_template, request, session
+#import os
+#from werkzeug.utils import secure_filename
+
+pip installation that we need are:
+pip install flask
+pip install werkzeug
+
+DATABASE.PY requirements
+
+The import modules that we need in order to connect to mysql workbench are as follows:
+import pandas as pd
+import mysql.connector as msql
+from mysql.connector import Error
+
+pip installation that we need are:
+pip install mysql-connector-python
+pip install pandas
+
+GRAPH.PY requirements
+
+imports module we need in order to display the csv file into chart form
+import matplotlib.pyplot as plt
+import pandas as pd
+
+pip installation that we need are:
+pip install pandas
+pip install matplotlib
+
+MAIN.PY requirement
+Importing that we need in order to create a csv file
+import csv
