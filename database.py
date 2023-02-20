@@ -6,9 +6,24 @@ from mysql.connector import Error
 empdata = pd.read_csv('data.csv', index_col=False, delimiter = ',')
 empdata.head()
 
-
+# The purpose of this block of code is to create a database in mysql workbench
 try:
     conn = msql.connect(host='localhost', user='root',
+                        password='root')# Here you type in your username and password that you use when working with MySQL WorkBench
+    if conn.is_connected():
+        cursor = conn.cursor()
+        cursor.execute('CREATE DATABASE customers')
+        print('Database is created')
+        cursor.execute(
+except Error as e:
+    print("Error while connecting to MySQL", e)
+
+
+# The purpose of this block of code is to create a table
+# And to insert the data that is in the csv file
+
+try:
+    conn = msql.connect(host='localhost', user='root', database='customers',
                         password='root')# Here you type in your username and password that you use when working with MySQL WorkBench
     if conn.is_connected():
         cursor = conn.cursor()
